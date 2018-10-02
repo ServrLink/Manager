@@ -1,33 +1,30 @@
 package link.servr.manager.core;
 
-import link.servr.manager.core.redis.Redis;
+import link.servr.manager.core.redis.RedisWrapper;
 
 public class Core implements Runnable {
 
     private static Core core;
-
-    private static void setInstance(Core instance) {
-        core = instance;
-    }
 
     public static Core getInstance() {
         return core;
     }
 
     public ConfigManager configManager;
-    public Redis redis;
+    public RedisWrapper redis;
     public ServrLink servrLink;
 
     public Core(ServrLink servrLink) {
-        Core.setInstance(this);
+        core = this;
 
         this.servrLink = servrLink;
         this.configManager = new ConfigManager("config.yml", servrLink.getDirectory());
-        this.redis = new Redis();
+        this.redis = new RedisWrapper();
     }
 
     @Override
     public void run() {
         configManager.setup();
+        redis.run();
     }
 }

@@ -14,11 +14,11 @@ public class Generator {
     private String key;
 
     public Generator() {
-        key = generateVerificationKey(32);
+        key = generateVerificationKey(cfg.getGeneric("key-length", 32));
     }
 
     public void register(UUID uuid) {
-        Core.getInstance().redis.setWithExpire(key, uuid, 600);
+        Core.getInstance().redis.setWithExpire("dislink:vkey:" + key, uuid, 600);
     }
 
     public URL getURL() {

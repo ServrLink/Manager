@@ -7,7 +7,7 @@ import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
-public class Redis implements Runnable {
+public class RedisWrapper implements Runnable {
 
     private ConfigManager cfgMgr = Core.getInstance().configManager;
     private ServrLink servrLink = Core.getInstance().servrLink;

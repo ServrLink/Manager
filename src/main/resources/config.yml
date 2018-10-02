@@ -1,7 +1,13 @@
 base-url: 'https://go.servr.link/'
+key-length: 32
 
 lang:
-  message: '&8> &3We use &6SrvLink &3to link Discord accounts to Minecraft accounts. Click on this message to link your accounts to receive rewards!'
+  initial: '&8> &3We use &6SrvLink &3to link Discord accounts to Minecraft accounts. Click on the link below to link your accounts to receive rewards!'
+  link:
+    color: GOLD # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/ChatColor.html
+    bold: true
+    underline: false
+    italic: false
 
 redis:
   host: '127.0.0.1'
