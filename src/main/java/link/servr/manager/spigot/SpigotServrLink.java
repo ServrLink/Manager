@@ -60,7 +60,7 @@ public class SpigotServrLink extends JavaPlugin implements ServrLink {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        if(cmd.getName().equalsIgnoreCase("link")) {
+        if(cmd.getName().equalsIgnoreCase("verify")) {
             if(!(sender instanceof Player)) {
                 sender.sendMessage("Only players can use this command");
                 return true;

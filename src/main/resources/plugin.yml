@@ -2,5 +2,5 @@ name: ServrLinkManager
 main: link.servr.manager.spigot.SpigotServrLink
 version: 1.0
 commands:
-  link:
+  verify:
     default: true
