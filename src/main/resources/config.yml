@@ -1,0 +1,16 @@
+base-url: 'https://go.servr.link/'
+
+lang:
+  message: '&8> &3We use &6SrvLink &3to link Discord accounts to Minecraft accounts. Click on this message to link your accounts to receive rewards!'
+
+redis:
+  host: '127.0.0.1'
+  port: 6379
+  timeout: 10
+  ssl: true
+  authentication:
+    enable: true
+    password: ''
+  pool:
+    max-connections: 5
+    max-idle: 5

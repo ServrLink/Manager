@@ -1,0 +1,6 @@
+name: ServrLinkManager
+main: link.servr.manager
+version: 1.0
+commands:
+  link:
+    default: true
